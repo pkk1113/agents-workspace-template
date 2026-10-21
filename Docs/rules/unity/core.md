@@ -8,6 +8,7 @@ Unity 프로젝트에서 작업할 때 항상 따른다. 이 문서와 `Docs/rul
 
 | 작업 | 문서 |
 |---|---|
+| 여러 구현 책임을 나누어 에이전트 협업 절차를 적용 | `../agent-collaboration.md`, `collaboration.md` |
 | Feature의 외부 접점이나 Composition(Root, Sub-Composition, Adapter)을 만들거나 수정 | `composition.md` |
 | 새 폴더·Feature를 만들거나 에셋·스크립트의 위치를 결정 | `asset-layout.md` |
 | UI 객체·스크립트를 만들거나 이름을 짓거나 화면의 기본 선택을 정하거나 UI 이벤트를 추가 | `ui.md` |
