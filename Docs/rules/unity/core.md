@@ -89,7 +89,7 @@ Feature는 `Property`(상태), `Command`(public 메서드), `Event`(변화 알�
 
 ### 배치 판단
 
-배치 위치가 모호하면 소유 범위를 기준으로 결정한다: 앱 외부 시스템과의 연동이면 `Infrastructure`, 여러 곳에서 재사용하면 `Common`, 하나의 제품 기능에만 속하면 `Features`, 한 씬을 구성하기 위해서만 필요하면 `Scenes/<SceneName>`, 그 밖의 전역 리소스와 설정이면 `__App__` 바로 아래다. 폴더별 세부 구조는 `asset-layout.md`.
+배치 위치가 모호하면 소유 범위를 기준으로 결정한다. 외부 시스템 연동은 `Infrastructure`, 여러 기능이나 씬이 재사용하는 구성 요소는 `Common`, 제품 기능이 소유한 구현과 에셋은 `Features`에 둔다. 한 씬에서만 사용하더라도 그 기능이 소유하는 UI·모델·재질·오디오는 해당 Feature에 둔다. 씬 파일·Composition·씬 조립 도구와 씬 배치에 직접 종속되는 데이터·베이크 결과는 `Scenes/<SceneName>`에 둔다. 그 밖의 전역 리소스와 설정은 `__App__` 바로 아래의 역할별 폴더에 둔다. 폴더별 세부 구조는 `asset-layout.md`를 따른다.
 
 ### 참조 규칙
 

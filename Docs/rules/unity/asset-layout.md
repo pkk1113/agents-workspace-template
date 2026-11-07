@@ -8,9 +8,9 @@
 
 - `Common`에는 특정 기능에 속하지 않고 여러 기능·씬에서 재사용되는 구성 요소를 둔다. 세부 구조는 아래 `Common 폴더 구성`을 따른다.
 - `Infrastructure`에는 서버, 메시지 브로커, 기기 SDK, OS 등 앱 외부 시스템과 통신하거나 이를 조회하는 코드를 둔다. 세부 구조는 아래 `Infrastructure 폴더 구성`을 따른다.
-- `Features`는 제품 기능 단위로 구성한다. 세부 구조는 아래의 Features 규칙을 따른다.
-- `Scenes`는 씬 이름별 하위 디렉터리로 구성한다. 해당 씬 파일과 이를 조립하는 Composition(Root Composition과 보조 클래스), Volume, 씬 전용 에셋을 함께 둔다. Composition의 구성은 `composition.md`를 따른다.
-  - 씬 파일은 씬 폴더 바로 아래에 두고, 스크립트는 `Scripts`, ScriptableObject 등 데이터 에셋은 `Data`에 둔다. 그 밖의 에셋은 Feature 구현 에셋과 같은 역할별 하위 폴더를 사용한다.
+- `Features`는 제품 기능 단위로 구성한다. 한 씬에서만 사용하는 UI 프리팹·모델·재질·오디오도 독립된 제품 기능이 소유하면 해당 Feature에 둔다.
+- `Scenes`는 씬 이름별 하위 디렉터리로 구성한다. 해당 씬 파일, Composition(Root Composition과 보조 클래스), 씬 조립 도구, 씬 배치에 직접 종속되는 데이터와 베이크 결과를 함께 둔다. Composition의 구성은 `composition.md`를 따른다.
+  - 씬 파일은 씬 폴더 바로 아래에 두고, Composition 스크립트는 `Scripts`, 씬 조립 도구는 `Scripts/Editor`, 씬 배치에 종속되는 데이터 에셋은 `Data`에 둔다. 베이크 결과 등은 역할에 맞는 하위 폴더에 둔다.
 - `Data`, `Font`, `RenderPipeline`처럼 기능이나 특정 씬에 종속되지 않는 프로젝트 전역 데이터·리소스·설정은 `__App__` 바로 아래의 역할별 폴더에 둔다. 여러 Feature 또는 여러 시각 세트가 공유하는 Custom Shader는 `RenderPipeline/Shaders`에 두며, 특정 Feature 또는 하나의 시각 세트에만 쓰이는 Shader는 그 소유 Feature 또는 시각 세트에 둔다.
 
 배치 위치가 모호할 때의 판단 기준과 폴더 간 참조 규칙은 `core.md`에 있다.
